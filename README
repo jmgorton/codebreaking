@@ -1,0 +1,28 @@
+an encryption/decryption project using basic shift ciphers and more complex vigenere ciphers.
+a vigenere cipher with only a single letter as the key is equivalent to a shift cipher, and is relatively easy to decrypt.
+vigenere_encryptor_mult is capable of combining multiple keys on a single encryption, with the resulting
+effective key length being equal to the lcm of the lengths of each individual key.
+
+a Makefile has been provided for this project.
+  a bunch of other comments because i was curious, but what's uncommented works fine.
+
+message1 and message2 are long text excerpts to be used for encryption and decryption testing.
+test is a shorter text that can also be used for testing, obviously.
+plaintext is a testing file that can be used to understand how to decrypt informal language.
+cipher is the output location, where any encrypted file will be directed to, overwriting what is currently saved there.
+
+vigenere_encryptor_mult.c
+  at runtime supply the number of keys that you will enter to encrypt the input file
+  in order to change the input or output files, modify the macros inside the file
+  the output tells effective key length, how many characters were and weren't encrypted
+    note: punctuation and spaces are currently not encrypted. it would be easy to include them.
+
+vigenere_encryptor.c
+  extremely basic version of the previous. no arguments at runtime. enter the key to encrypt the file
+  when prompted, including newline characters. end input via CTRL-d or CTRL-c. no output.
+
+frequency_analyzer.c
+  no arguments supplied at runtime. analyzes the input file for various simple statistics.
+  to change the input file, modify the macro at the top of the file.
+  output is pretty straightforward.
+  massive amount of nonsense and unrelated tests in this file. clean that up sometime.
